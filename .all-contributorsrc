@@ -153,6 +153,38 @@
         "code",
         "doc"
       ]
+    },
+    {
+      "login": "danielasy",
+      "name": "Daniela Yassuda",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/12578347?v=3",
+      "profile": "https://github.com/danielasy",
+      "contributions": [
+        "code"
+      ]
+    },
+    {
+      "login": "kyle-west",
+      "name": "Kyle West",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/18150457?v=4",
+      "profile": "https://github.com/kyle-west",
+      "contributions": [
+        "code",
+        "test"
+      ]
+    },
+    {
+      "login": "xala3pa",
+      "name": "Álvaro Salazar",
+      "avatar_url": "https://avatars0.githubusercontent.com/u/655613?v=4",
+      "profile": "http://twitter.com/xala3pa",
+      "contributions": [
+        "doc"
+      ]
     }
-  ]
+  ],
+  "repoType": "github",
+  "repoHost": "https://github.com",
+  "skipCi": true,
+  "contributorsPerLine": 7
 }

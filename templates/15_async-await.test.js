@@ -10,7 +10,9 @@ test('should work with resolved promises', async () => {
   // WORKSHOP_START
   return doAsync().then(result => {
     expect(result).toBe('resolved')
-    throw new Error('convert this to an async/await function and remove this error')
+    throw new Error(
+      'convert this to an async/await function and remove this error',
+    )
   })
   // WORKSHOP_END
 })
@@ -27,7 +29,9 @@ test('should throw an error with a rejected promise', async () => {
   // WORKSHOP_START
   return doAsync(true).catch(error => {
     expect(error).toBe('rejected')
-    throw new Error('convert this to an async/await function and remove this error')
+    throw new Error(
+      'convert this to an async/await function and remove this error',
+    )
   })
   // WORKSHOP_END
 })
@@ -66,4 +70,3 @@ test('I submitted my elaboration and feedback', () => {
 // If you get this far, try adding a few more tests,
 // then file a pull request to add them to the extra credit!
 // Learn more here: http://kcd.im/es6-workshop-contributing
-

@@ -13,7 +13,7 @@ test('should support string interpolation', () => {
   // construct a string using template literal string interpolation
   const personsFriends = `${person.name} has 6 friends: ${person.friends[0]}, ${person.friends[1]}, ${person.friends[2]}, ${person.friends[3]}, ${person.friends[4]}, ${person.friends[5]}`
   expect(personsFriends).toBe(
-    'Kent C. Dodds has 6 friends: Brooke Dodds, Matt Zabriskie, Aaron Frost, Dave Geddes, Joe Eames, Ryan Florence'
+    'Kent C. Dodds has 6 friends: Brooke Dodds, Matt Zabriskie, Aaron Frost, Dave Geddes, Joe Eames, Ryan Florence',
   )
 })
 
@@ -32,7 +32,6 @@ test(`should support string escaping`, () => {
   expect(`This is \`escaped\` backticks`).toBe('This is `escaped` backticks')
 })
 
-
 //////// EXTRA CREDIT ////////
 
 // you likely won't often use tagging, but it can be handy!
@@ -40,7 +39,9 @@ test(`should call the tagging function`, () => {
   const noun = 'World'
   const emotion = 'happy'
   const result = tagIt`Hello ${noun}! Are you feeling ${emotion} today?`
-  expect(result).toBe('Hello super-cool World! Are you feeling really happy today?')
+  expect(result).toBe(
+    'Hello super-cool World! Are you feeling really happy today?',
+  )
 
   function tagIt(literalString, ...interpolatedParts) {
     // implement this function to make the test pass
@@ -62,7 +63,6 @@ test('I submitted my elaboration and feedback', () => {
   expect(true).toBe(submitted)
 })
 ////////////////////////////////
-
 
 //////// EXTRA CREDIT ////////
 

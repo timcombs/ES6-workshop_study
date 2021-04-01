@@ -31,7 +31,6 @@ test('can have instance methods', () => {
   expect(animal.sayName()).toBe('My name is: Honey Badger')
 })
 
-
 test('can have static methods', () => {
   // Create an Animal class, pass in the name to the constructor,
   // and add a create method that takes a name and returns an instance
@@ -45,12 +44,14 @@ test('can have static methods', () => {
 test('can extend another class', () => {
   // Create an Animal class
   // Create a Dog class that extends Animal
-  // Add sayName to Animal
+  // Add sayName to Dog
 
   const dog = new Dog('Fido')
 
   expect(dog instanceof Dog).toBe(true)
   expect(dog instanceof Animal).toBe(true)
+  expect(Animal.prototype.sayName).toBeUndefined()
+  expect(Dog.prototype.sayName).toBeDefined()
 })
 
 test('can use property setters and getters', () => {

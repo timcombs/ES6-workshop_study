@@ -28,7 +28,7 @@ test('cannot modify the value of a `const` variable', () => {
 })
 
 test('is trapped inside of an `if` statement', () => {
-  if (true) { // eslint-disable-line no-constant-condition
+  if (true) {
     // Change to `var` to `let`, so that b is scoped inside of the if-statement
     let b = 1
   }
@@ -84,3 +84,5 @@ test('means that we can declare constant with the same name in block statement',
 // If you get this far, try adding a few more tests,
 // then file a pull request to add them to the extra credit!
 // Learn more here: http://kcd.im/es6-workshop-contributing
+
+/* eslint no-constant-condition:0 */

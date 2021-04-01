@@ -18,18 +18,14 @@ function unique() {
 }
 // console.log(unique())
 
-function initialzeSet() {
+function initializeSet() {
   const arr = [1, 5, 7, 2, 9, 4]
   // TODO: change the following line
   // so that the Set t has array's contents
   const set = new Set()
   return set
 }
-// console.log(initialzeSet())
-
-
-
-
+// console.log(initializeSet())
 
 function setInfo() {
   const obj = {a: 42}
@@ -83,35 +79,20 @@ function restSet() {
 }
 // console.log(restSet())
 
-
-
-
-
-
 // SOLUTION BELOW
 // No peeking!
 
-
-
-
-
-
-
-
-
-
-function initialzeSetSOLUTION() {
+function initializeSetSOLUTION() {
   const arr = [1, 5, 7, 2, 9, 4]
   const t = new Set(arr)
   return t
 }
-// console.log(initialzeSet())
-
+// console.log(initializeSetSOLUTION())
 
 function setInfoSOLUTION() {
   const obj = {a: 42}
   const set = new Set([1, 2, obj, 3, 4])
-  const [,, thirdItem] = set
+  const [, , thirdItem] = set
   return {
     size: set.size,
     hasObj: set.has(obj),
@@ -133,4 +114,3 @@ function removeDuplicatesSOLUTION() {
   return uniqueArr
 }
 // console.log(removeDuplicatesSOLUTION())
-

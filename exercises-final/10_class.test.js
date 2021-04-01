@@ -44,7 +44,6 @@ test('can have instance methods', () => {
   expect(animal.sayName()).toBe('My name is: Honey Badger')
 })
 
-
 test('can have static methods', () => {
   class Animal {
     constructor(name = 'Honey Badger') {
@@ -71,15 +70,11 @@ test('can extend another class', () => {
     constructor(name = 'Honey Badger') {
       this.name = name
     }
-
-    sayName() {
-      return `My name is: ${this.name}`
-    }
   }
 
   class Dog extends Animal {
-    constructor(name) {
-      super(name)
+    sayName() {
+      return `My name is: ${this.name}`
     }
   }
 
@@ -87,6 +82,8 @@ test('can extend another class', () => {
 
   expect(dog instanceof Dog).toBe(true)
   expect(dog instanceof Animal).toBe(true)
+  expect(Animal.prototype.sayName).toBeUndefined()
+  expect(Dog.prototype.sayName).toBeDefined()
 })
 
 test('can use property setters and getters', () => {

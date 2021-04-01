@@ -22,7 +22,8 @@ test('can replace traditional functions #2', () => {
 })
 
 test('binds `this` to the eval scope, not the runtime scope', () => {
-  // Change the person object. One of the functions should become an arrow to allow for 'this' to retain context correctly
+  // Change the person object. One of the functions should become an arrow to
+  // allow for 'this' to retain context correctly
   const person = {
     name: 'Aaron',
     greetFriends: function(friends) {
@@ -38,18 +39,18 @@ test('binds `this` to the eval scope, not the runtime scope', () => {
 
 test('can make array filter chains more managable', () => {
   const data = [
-    {type: 'Widget', name: 'Sprocket', price: 10.00, qty: 3},
-    {type: 'Widget', name: 'Bracket', price: 1.00, qty: 5},
-    {type: 'Widget', name: 'Brace', price: 2.50, qty: 1},
-    {type: 'Widget', name: 'Sprocket', price: 4.00, qty: 2},
+    {type: 'Widget', name: 'Sprocket', price: 10.0, qty: 3},
+    {type: 'Widget', name: 'Bracket', price: 1.0, qty: 5},
+    {type: 'Widget', name: 'Brace', price: 2.5, qty: 1},
+    {type: 'Widget', name: 'Sprocket', price: 4.0, qty: 2},
     {type: 'Food', name: 'Gouda', price: 8.75, qty: 4},
-    {type: 'Food', name: 'Bacon', price: 3.50, qty: 3},
-    {type: 'CD', name: 'Queen Best Hits', price: 5.50, qty: 5},
+    {type: 'Food', name: 'Bacon', price: 3.5, qty: 3},
+    {type: 'CD', name: 'Queen Best Hits', price: 5.5, qty: 5},
     {type: 'CD', name: 'Brittney Best Hits', price: 6.25, qty: 3},
     {type: 'CD', name: 'JT Best Hits', price: 2.25, qty: 6},
   ]
 
-  // REPLACE ALL REGULAR FUNCTION WITH ARROW FUNCTIONS
+  // REPLACE ALL REGULAR FUNCTIONS WITH ARROW FUNCTIONS
   const shoppingList = data
     .filter(function(d) {
       return d.type != 'Widget'
@@ -57,9 +58,9 @@ test('can make array filter chains more managable', () => {
     .filter(function(d) {
       return d.price < 5
     }) // Find only remaining items with price < 5
-    .sort(function(d) {
-      return d.qty * -1
-    }) // Sort by price, desc
+    .sort(function(a, b) {
+      return a.qty - b.qty
+    }) // Sort by quantity, desc
     .map(function(d) {
       return d.name
     }) // Pull just the name from each item

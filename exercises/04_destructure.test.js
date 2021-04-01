@@ -112,20 +112,7 @@ test('can skip indexes in arrays', () => {
 })
 
 test('can reach nested arrays', () => {
-  // Call getNestedNumbers and pull the first value out as `one`, the 3 as `three` and 6 as `sixth`.
-  const nestedNums = getNestedNumbers();
-
-  [1, 2, [3, 4, [5, 6]]]
-
-  const [
-    one,
-    ,
-    [three,
-    ,
-    [,
-    sixth]]
-  ] = nestedNums
-
+  // Call getNestedNumbers and pull the first value out as `one`, the 3 as `three` and 6 as `six`.
   expect(one).toBe(1)
   expect(three).toBe(3)
   expect(sixth).toBe(6)
